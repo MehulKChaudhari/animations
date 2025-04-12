@@ -1,12 +1,35 @@
-# React + Vite
+# React Animation Collection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains animations created by Mehulkc, including solutions to various UI challenges.
 
-Currently, two official plugins are available:
+### Peerlist UI Challenges
+Challenge link: [Peerlist UI Animation Challenge](https://peerlist.io/challenges/ui-animation-challenge?utm_source=left-panel)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Fluid Menu Animation  [preview](https://animations.mehul.wiki/menu-liquid-animation)
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- CSS Animations
+- CSS-in-JS
+- React Router
+
+## 🚀 Getting Started
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/animations.git
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run the development server
+```bash
+npm run dev
+```
+
+---
+Created with ❤️ by Mehulkc

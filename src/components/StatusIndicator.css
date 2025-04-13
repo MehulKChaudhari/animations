@@ -1,0 +1,114 @@
+.status-container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.status-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.status-indicator {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(var(--status-color), 0.1);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.status-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--status-color);
+  transition: all 0.3s ease;
+}
+
+.pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--status-color);
+  animation: pulse 2s ease-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.status-content {
+  text-align: left;
+}
+
+.status-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.status-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.status-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.status-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.status-button-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--status-color);
+}
+
+.status-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--status-color);
+}
+
+.status-button.active {
+  background: rgba(var(--status-color), 0.1);
+  border-color: var(--status-color);
+}

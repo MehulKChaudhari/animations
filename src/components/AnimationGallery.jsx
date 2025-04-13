@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import './AnimationGallery.css'
 import menuAnimationImg from '../assets/menu-animation.png'
+import statusIndicatorImg from '../assets/status-indicator.png'
+import transactionStatusImg from '../assets/transaction-status.png'
 import placeholderImg from '../assets/placeholder.svg'
 
 const AnimationGallery = () => {
@@ -14,6 +16,22 @@ const AnimationGallery = () => {
       description: 'A menu that transforms with natural, liquid-like animations when triggered from the top left corner. Let your creativity shape how it moves, morphs, and settles into place',
       bgColor: '#3b82f6',
       image: menuAnimationImg  
+    },
+    {
+      id: 'status-indicator',
+      title: 'Status Indicator',
+      route: '/status-indicator',
+      description: 'An elegant and informative status indicator with smooth transitions and pulse animations',
+      bgColor: '#22c55e',
+      image: statusIndicatorImg
+    },
+    {
+      id: 'transaction-status',
+      title: 'Transaction Status',
+      route: '/transaction-status',
+      description: 'An elegant transaction status indicator with loading and result states',
+      bgColor: '#3b82f6',
+      image: transactionStatusImg
     }
   ]
 

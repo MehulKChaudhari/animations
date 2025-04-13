@@ -5,7 +5,11 @@ This repository contains animations created by Mehulkc, including solutions to v
 ### Peerlist UI Challenges
 Challenge link: [Peerlist UI Animation Challenge](https://peerlist.io/challenges/ui-animation-challenge?utm_source=left-panel)
 
-1. Fluid Menu Animation  [preview](https://animations.mehul.wiki/menu-liquid-animation)
+1. Fluid Menu Animation  [preview](https://animations.mehul.wiki/menu-liquid-animation) 
+2. Transaction Status Button - Interactive transaction states with animated feedback [preview](https://animations.mehul.wiki/transaction-status) 
+
+## Animations List
+1. Status Indicator - Dynamic user status display [preview](https://animations.mehul.wiki/status-indicator) 
 
 ## 🛠️ Tech Stack
 

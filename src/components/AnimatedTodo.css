@@ -1,0 +1,235 @@
+.todo-container {
+  max-width: 500px;
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.875rem 1.125rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  background: var(--card-hover);
+  border: 1px solid var(--card-border);
+}
+
+.add-button {
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--card-hover);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-button:hover {
+  background: var(--card-border);
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.todo-item {
+  margin-bottom: 0.75rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.todo-item.new-item {
+  animation: addItem 0.4s ease forwards;
+}
+
+@keyframes addItem {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item.slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(46px);
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.checkbox-container:hover {
+  background: var(--card-hover);
+}
+
+.checkbox-container:hover .checkbox {
+  border-color: #22c55e80;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ffffff40;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+  background: transparent;
+}
+
+.check-icon {
+  color: white;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.check-icon > path {
+  stroke-dasharray: 30;
+  stroke-dashoffset: -30;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox {
+  background: #22c55e;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px #22c55e33;
+}
+
+input[type="checkbox"]:checked + .checkbox .check-icon {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked + .checkbox .check-icon > path {
+  animation: drawCheckReversed 0.3s ease-out forwards 0.1s;
+}
+
+.todo-text {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.completed .todo-text {
+  color: #ffffffa6;
+}
+
+.completed .todo-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 3.5px;
+  background: #22c55e;
+  opacity: 0.8;
+  animation: drawStrike 0.2s ease-out forwards 0.1s;
+  transform: translateY(-50%);
+}
+
+@keyframes drawCheckReversed {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawStrike {
+  to {
+    width: 100%;
+  }
+}
+
+.empty-todos {
+  text-align: center;
+  color: #ffffff80;
+  margin: 2rem 0;
+}
+
+.todo-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.todo-item.completed {
+  opacity: 0.85;
+  transform: translateX(4px);
+  border-left: 2px solid #22c55e;
+}
+
+.completed .todo-text {
+  color: #ffffffa6;
+}
+
+.completed .todo-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 3.5px; 
+  background: #22c55e;
+  opacity: 0.8;
+  animation: drawStrike 0.2s ease-out forwards 0.1s;
+  transform: translateY(-50%);
+}

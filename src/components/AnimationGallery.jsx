@@ -32,7 +32,15 @@ const AnimationGallery = () => {
       description: 'An elegant transaction status indicator with loading and result states',
       bgColor: '#3b82f6',
       image: transactionStatusImg
-    }
+    },
+    {
+      id: "animated-todo",
+      title: "Animated Todo",
+      route: "/animated-todo",
+      description: "Smooth checkbox interactions with satisfying completion animations",
+      bgColor: "#3b82f6",
+      image: placeholderImg
+    } 
   ]
 
   const handleImageError = (e) => {

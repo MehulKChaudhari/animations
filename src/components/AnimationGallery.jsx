@@ -40,7 +40,15 @@ const AnimationGallery = () => {
       description: "Smooth checkbox interactions with satisfying completion animations",
       bgColor: "#3b82f6",
       image: placeholderImg
-    } 
+    },
+    {
+      id: "pricing-toggle",
+      title: "Pricing Toggle",
+      route: "/pricing-toggle",
+      description: "A pricing toggle component with smooth animations and interactive features",
+      bgColor: "#3b82f6",
+      image: placeholderImg
+    }
   ]
 
   const handleImageError = (e) => {

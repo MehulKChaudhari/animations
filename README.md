@@ -8,6 +8,7 @@ Challenge link: [Peerlist UI Animation Challenge](https://peerlist.io/challenges
 1. Fluid Menu Animation  [preview](https://animations.mehul.wiki/menu-liquid-animation) 
 2. Transaction Status Button - Interactive transaction states with animated feedback [preview](https://animations.mehul.wiki/transaction-status) 
 3. Animated Todo List - Smooth checkbox interactions with satisfying completion animations [preview](https://animations.mehul.wiki/animated-todo)
+4. Pricing Toggle - Elegant pricing selector with smooth sliding transitions [preview](https://animations.mehul.wiki/pricing-toggle)
 
 ## Animations List
 1. Status Indicator - Dynamic user status display [preview](https://animations.mehul.wiki/status-indicator) 

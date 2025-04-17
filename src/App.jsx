@@ -6,6 +6,8 @@ import TransactionButton from './components/TransactionButton'
 import AnimatedTodo from './components/AnimatedTodo'
 import './App.css'
 import PricingToggle from './components/PricingToggle'
+import LayoutTabs from './components/LayoutTabs'
+
 function App() {
   return (
     <Router>
@@ -16,6 +18,7 @@ function App() {
         <Route path="/transaction-status" element={<TransactionButton />} />
         <Route path="/animated-todo" element={<AnimatedTodo />} />
         <Route path="/pricing-toggle" element={<PricingToggle />} />
+        <Route path="/layout-tabs" element={<LayoutTabs />} />
       </Routes>
     </Router>
   )

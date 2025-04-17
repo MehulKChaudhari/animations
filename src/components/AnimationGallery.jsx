@@ -48,6 +48,14 @@ const AnimationGallery = () => {
       description: "A pricing toggle component with smooth animations and interactive features",
       bgColor: "#3b82f6",
       image: placeholderImg
+    },
+    {
+      id: "layout-tabs",
+      title: "Layout Tabs",
+      route: "/layout-tabs",
+      description: "A layout tabs component with smooth animations and interactive features",
+      bgColor: "#3b82f6",
+      image: placeholderImg
     }
   ]
 

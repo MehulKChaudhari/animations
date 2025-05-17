@@ -8,7 +8,7 @@ const MOCK_ITEMS = [
     title: "Cosmic Dreams",
     value: "0.855 ETH",
     number: "#209",
-    image: "https://images.unsplash.com/photo-1647041853051-97a4b4c0569d?w=400&h=400&fit=crop&q=80"
+    image: "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400&h=400&fit=crop&q=80"
   },
   {
     id: 2, 

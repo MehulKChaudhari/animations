@@ -3,7 +3,9 @@ import './AnimationGallery.css'
 import menuAnimationImg from '../assets/menu-animation.png'
 import statusIndicatorImg from '../assets/status-indicator.png'
 import transactionStatusImg from '../assets/transaction-status.png'
-import placeholderImg from '../assets/placeholder.svg'
+import todoListImg from '../assets/todo-list.png'
+import pricingToggleImg from '../assets/pricing-toggle.png'
+import layoutTabsImg from '../assets/layout-tabs.png'
 
 const AnimationGallery = () => {
   const navigate = useNavigate()
@@ -39,7 +41,7 @@ const AnimationGallery = () => {
       route: "/animated-todo",
       description: "Smooth checkbox interactions with satisfying completion animations",
       bgColor: "#3b82f6",
-      image: placeholderImg
+      image: todoListImg
     },
     {
       id: "pricing-toggle",
@@ -47,7 +49,7 @@ const AnimationGallery = () => {
       route: "/pricing-toggle",
       description: "A pricing toggle component with smooth animations and interactive features",
       bgColor: "#3b82f6",
-      image: placeholderImg
+      image: pricingToggleImg
     },
     {
       id: "layout-tabs",
@@ -55,7 +57,7 @@ const AnimationGallery = () => {
       route: "/layout-tabs",
       description: "A layout tabs component with smooth animations and interactive features",
       bgColor: "#3b82f6",
-      image: placeholderImg
+      image: layoutTabsImg
     }
   ]
 

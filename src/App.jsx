@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import MenuLiquidAnimation from './components/MenuLiquidAnimation'
 import AnimationGallery from './components/AnimationGallery'
 import StatusIndicator from './components/StatusIndicator'
@@ -7,10 +7,15 @@ import AnimatedTodo from './components/AnimatedTodo'
 import './App.css'
 import PricingToggle from './components/PricingToggle'
 import LayoutTabs from './components/LayoutTabs'
+import BackButton from './components/BackButton'
 
-function App() {
+const AppLayout = () => {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+  
   return (
-    <Router>
+    <>
+      {!isHomePage && <BackButton />}
       <Routes>
         <Route path="/" element={<AnimationGallery />} />
         <Route path="/menu-liquid-animation" element={<MenuLiquidAnimation />} />
@@ -20,6 +25,14 @@ function App() {
         <Route path="/pricing-toggle" element={<PricingToggle />} />
         <Route path="/layout-tabs" element={<LayoutTabs />} />
       </Routes>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <AppLayout />
     </Router>
   )
 }
